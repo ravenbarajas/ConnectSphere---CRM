@@ -52,7 +52,7 @@ export function AppSidebar() {
           <div className="rounded-md bg-primary p-1">
             <BarChart3 className="h-6 w-6 text-primary-foreground" />
           </div>
-          <span className="text-xl font-bold">ClientFlow</span>
+          <span className="text-xl font-bold">ConnectSphere</span>
         </div>
       </SidebarHeader>
       <SidebarContent>

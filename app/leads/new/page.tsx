@@ -2,8 +2,8 @@ import type { Metadata } from "next"
 import { LeadForm } from "@/components/leads/lead-form"
 
 export const metadata: Metadata = {
-  title: "Add Lead | ClientFlow CRM",
-  description: "Add a new lead to ClientFlow CRM",
+  title: "Add Lead | ConnectSphere CRM",
+  description: "Add a new lead to ConnectSphere CRM",
 }
 
 export default function NewLeadPage() {

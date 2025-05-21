@@ -18,7 +18,7 @@ export function MainNav() {
     if (pathname.startsWith("/leads")) return "Leads"
     if (pathname.startsWith("/deals")) return "Deals"
     if (pathname.startsWith("/activities")) return "Activities"
-    return "ClientFlow CRM"
+    return "ConnectSphere CRM"
   }
 
   return (

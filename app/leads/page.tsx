@@ -3,8 +3,8 @@ import { LeadsTable } from "@/components/leads/leads-table"
 import { LeadsHeader } from "@/components/leads/leads-header"
 
 export const metadata: Metadata = {
-  title: "Leads | ClientFlow CRM",
-  description: "Manage your leads in ClientFlow CRM",
+  title: "Leads | ConnectSphere CRM",
+  description: "Manage your leads in ConnectSphere CRM",
 }
 
 export default function LeadsPage() {

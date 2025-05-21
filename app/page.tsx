@@ -9,8 +9,8 @@ import { RecentActivities } from "@/components/dashboard/recent-activities"
 import { DashboardCard } from "@/components/dashboard/dashboard-card"
 
 export const metadata: Metadata = {
-  title: "Dashboard | ClientFlow CRM",
-  description: "Dashboard for ClientFlow CRM",
+  title: "Dashboard | ConnectSphere CRM",
+  description: "Dashboard for ConnectSphere CRM",
 }
 
 export default function DashboardPage() {

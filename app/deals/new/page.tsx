@@ -2,8 +2,8 @@ import type { Metadata } from "next"
 import { DealForm } from "@/components/deals/deal-form"
 
 export const metadata: Metadata = {
-  title: "Add Deal | ClientFlow CRM",
-  description: "Add a new deal to ClientFlow CRM",
+  title: "Add Deal | ConnectSphere CRM",
+  description: "Add a new deal to ConnectSphere CRM",
 }
 
 export default function NewDealPage() {

@@ -13,7 +13,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "ClientFlow CRM",
+  title: "ConnectSphere CRM",
   description: "A modern CRM application for managing contacts, leads, and deals",
     generator: 'v0.dev'
 }
