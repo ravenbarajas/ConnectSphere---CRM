@@ -1,0 +1,211 @@
+Here's a comprehensive **Product Requirements Document (PRD)** for the **ClientPulse – Smart Customer Engagement Tracker** frontend mockup, built using **React + Vite**, targeting **small to mid-sized service-based businesses**.
+
+---
+
+# 📝 Product Requirements Document (PRD)
+
+## Product Name:
+
+**ClientPulse – Smart Customer Engagement Tracker**
+
+## Purpose:
+
+To provide a responsive and intuitive frontend interface that helps small to mid-sized service-based businesses manage and nurture client relationships through smart engagement tools and insights.
+
+---
+
+## 🧑‍💼 Target Users:
+
+* Small to mid-sized businesses (e.g., salons, law firms, consultancies)
+* Business owners, customer success reps, client managers
+
+---
+
+## 💡 Core Idea:
+
+Empower businesses to automate and personalize client follow-ups, keep track of interaction history, and score leads using intuitive visual tools.
+
+---
+
+## 🔧 Tech Stack:
+
+* **Frontend Framework**: React (with Hooks and Context API)
+* **Build Tool**: Vite
+* **Styling**: Tailwind CSS or Styled Components
+* **State Management**: Context API (or Redux Toolkit for scalable state)
+* **Routing**: React Router DOM
+* **Testing**: Jest + React Testing Library
+* **Deployment**: Vercel/Netlify for frontend mockup
+
+---
+
+## 📐 Site Architecture
+
+```
+Landing Page /
+├── Hero Section
+├── Features Preview
+├── Testimonials
+├── Call to Action
+└── Footer
+
+Dashboard (Protected Route) /dashboard
+├── Sidebar Navigation
+│   ├── Timeline
+│   ├── Follow-ups
+│   ├── Lead Scoring
+│   └── Notes & Tags
+├── Client Interaction Timeline (/dashboard/timeline)
+├── Follow-up Scheduler (/dashboard/followups)
+├── Lead Scoring (/dashboard/leads)
+└── Quick Notes & Tags (/dashboard/notes)
+```
+
+---
+
+## 🎯 Key Pages and Components
+
+### 1. **Landing Page**
+
+#### Goal: Convert interest to sign-up/demo
+
+* **Hero Section**: Catchy tagline, illustration, CTA button (e.g., “Try ClientPulse Free”)
+* **Core Features Overview**: Cards with icons/text for each feature
+* **Client Testimonials**: Carousel or static quotes
+* **Pricing Preview** (optional): Brief free/paid tier tease
+* **CTA Section**: “Get Started” button leading to login/signup
+* **Footer**: Contact info, links, terms/privacy
+
+---
+
+### 2. **Dashboard Structure**
+
+#### a. **Sidebar Navigation**
+
+* Collapsible with icons
+* Routes:
+
+  * Timeline
+  * Follow-ups
+  * Lead Scoring
+  * Notes & Tags
+
+---
+
+### 3. **Core Features**
+
+#### a. **Client Interaction Timeline (/dashboard/timeline)**
+
+* Timeline view of each client’s activity:
+
+  * Emails, SMS, meetings, calls
+  * Filters by client, date, interaction type
+* Component: `<InteractionCard />`
+* Search bar and tag filter
+
+#### b. **Follow-up Scheduling (/dashboard/followups)**
+
+* List view with upcoming & overdue follow-ups
+* Form to schedule new follow-ups:
+
+  * Select client
+  * Choose email/SMS
+  * Pick date/time
+  * Optional auto-reminder toggle
+* Integration-ready buttons (Send via Email/SMS APIs)
+* Component: `<FollowUpForm />`, `<FollowUpList />`
+
+#### c. **Lead Scoring (/dashboard/leads)**
+
+* Auto-generated scores based on:
+
+  * Frequency of interactions
+  * Recency
+  * Client responsiveness
+* Visualization: Bar graph, color-coded scorecards
+* Component: `<LeadScoreCard />`, `<LeadScoreChart />`
+
+#### d. **Quick Notes & Tagging (/dashboard/notes)**
+
+* Add quick notes to client profiles
+* Tag clients (e.g., “VIP”, “Follow-Up Urgent”)
+* Tag filter chips for quick client segmentation
+* Component: `<ClientNote />`, `<TagList />`, `<NoteForm />`
+
+---
+
+## 🔐 Authentication (Basic for Mockup)
+
+* Simple Login/Signup with fake auth (context + localStorage)
+* Route protection using `<PrivateRoute />`
+
+---
+
+## 🧪 Testing
+
+* Unit tests for core components
+* Snapshot tests for major views
+* Mock data with JSON server or fixtures
+
+---
+
+## 🧭 Navigation Structure
+
+* React Router setup with:
+
+  ```jsx
+  <Routes>
+    <Route path="/" element={<LandingPage />} />
+    <Route path="/login" element={<Login />} />
+    <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} >
+      <Route path="timeline" element={<Timeline />} />
+      <Route path="followups" element={<FollowUps />} />
+      <Route path="leads" element={<LeadScoring />} />
+      <Route path="notes" element={<Notes />} />
+    </Route>
+  </Routes>
+  ```
+
+---
+
+## 📊 Mock Data Structure
+
+```json
+{
+  "clients": [
+    {
+      "id": "c1",
+      "name": "John Smith",
+      "interactions": [...],
+      "tags": ["VIP", "Follow-Up Urgent"],
+      "leadScore": 82,
+      "notes": [...]
+    }
+  ],
+  "followUps": [
+    {
+      "id": "f1",
+      "clientId": "c1",
+      "type": "SMS",
+      "date": "2025-06-01T10:00:00Z",
+      "reminder": true
+    }
+  ]
+}
+```
+
+---
+
+## 📅 Timeline (For MVP Mockup)
+
+| Week | Milestone                           |
+| ---- | ----------------------------------- |
+| 1    | Project scaffolding, landing page   |
+| 2    | Dashboard layout, sidebar nav       |
+| 3    | Timeline and Follow-ups feature     |
+| 4    | Lead Scoring and Notes/Tags section |
+| 5    | Polish UI, testing, and mock deploy |
+
+---
+
+Would you like this mockup translated into a working codebase starter with Vite scaffolding and React components set up?
